@@ -7,6 +7,15 @@ namespace Assignment_4
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var phoneBook = new PhoneBook();
+            phoneBook.DisplayList();
+            System.Console.WriteLine();
+            phoneBook.SortByName();
+            phoneBook.DisplayList();
+System.Console.WriteLine("Table");
+            phoneBook.FillTable();
+            phoneBook.DisplayTable();
+        
         }
     }
 }
