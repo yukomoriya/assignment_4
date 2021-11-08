@@ -48,5 +48,37 @@ namespace TestProject
 
             Assert.AreEqual(expected, partyManager.GetGuestCount());
         }
+
+        [Test]
+
+        public void TestDeleteGuests()
+        {
+            PartyManager partyManager = new PartyManager(5);
+
+            _ = partyManager.AddNewGuests("Mio", "Moriya");
+            _ = partyManager.AddNewGuests("Juno", "Moriya");
+            _ = partyManager.AddNewGuests("Olof", "Moriya");
+
+            partyManager.DeleteGuest(2);
+
+            int guestCount = partyManager.GetGuestCount();
+            Assert.AreEqual(2, guestCount);
+            Assert.IsNull(partyManager.Guests[2]);
+        }
+
+        [Test]
+        public void TestChangeGuest()
+        {
+            PartyManager partyManager = new PartyManager(5);
+
+            _= partyManager.AddNewGuests("Mio", "Moriya");
+            _ = partyManager.AddNewGuests("Juno", "Moriya");
+            _ = partyManager.AddNewGuests("Olof", "Moriya");
+
+            partyManager.ChangeGuest("Karen", "Sun", 2);
+
+            Assert.AreEqual("Karen", partyManager.Guests[2].GivenName);
+            Assert.AreEqual("Sun", partyManager.Guests[2].FamilyName);
+        }
     }
 }
