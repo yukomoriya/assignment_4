@@ -30,19 +30,19 @@ namespace partyOrganizer
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblMaxNumberGuests = new System.Windows.Forms.Label();
-            this.lblCostPerson = new System.Windows.Forms.Label();
-            this.lblFeePerson = new System.Windows.Forms.Label();
-            this.txtbMaxNumberGuests = new System.Windows.Forms.TextBox();
-            this.txtbCostPerson = new System.Windows.Forms.TextBox();
-            this.txtbFeePerson = new System.Windows.Forms.TextBox();
             this.btnCreateList = new System.Windows.Forms.Button();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.txtbFirstName = new System.Windows.Forms.TextBox();
-            this.txtbLastName = new System.Windows.Forms.TextBox();
+            this.txtbFeePerson = new System.Windows.Forms.TextBox();
+            this.txtbCostPerson = new System.Windows.Forms.TextBox();
+            this.txtbMaxNumberGuests = new System.Windows.Forms.TextBox();
+            this.lblFeePerson = new System.Windows.Forms.Label();
+            this.lblCostPerson = new System.Windows.Forms.Label();
+            this.lblMaxNumberGuests = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtbLastName = new System.Windows.Forms.TextBox();
+            this.txtbFirstName = new System.Windows.Forms.TextBox();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbNumberOfGuests = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,6 +75,64 @@ namespace partyOrganizer
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Party";
             // 
+            // btnCreateList
+            // 
+            this.btnCreateList.Location = new System.Drawing.Point(121, 153);
+            this.btnCreateList.Name = "btnCreateList";
+            this.btnCreateList.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateList.TabIndex = 6;
+            this.btnCreateList.Text = "Create List";
+            this.btnCreateList.UseVisualStyleBackColor = true;
+            this.btnCreateList.Click += new System.EventHandler(this.btnCreateList_Click);
+            // 
+            // txtbFeePerson
+            // 
+            this.txtbFeePerson.Location = new System.Drawing.Point(172, 97);
+            this.txtbFeePerson.Name = "txtbFeePerson";
+            this.txtbFeePerson.Size = new System.Drawing.Size(100, 23);
+            this.txtbFeePerson.TabIndex = 5;
+            // 
+            // txtbCostPerson
+            // 
+            this.txtbCostPerson.Location = new System.Drawing.Point(172, 68);
+            this.txtbCostPerson.Name = "txtbCostPerson";
+            this.txtbCostPerson.Size = new System.Drawing.Size(100, 23);
+            this.txtbCostPerson.TabIndex = 4;
+            // 
+            // txtbMaxNumberGuests
+            // 
+            this.txtbMaxNumberGuests.Location = new System.Drawing.Point(172, 39);
+            this.txtbMaxNumberGuests.Name = "txtbMaxNumberGuests";
+            this.txtbMaxNumberGuests.Size = new System.Drawing.Size(100, 23);
+            this.txtbMaxNumberGuests.TabIndex = 3;
+            // 
+            // lblFeePerson
+            // 
+            this.lblFeePerson.AutoSize = true;
+            this.lblFeePerson.Location = new System.Drawing.Point(11, 105);
+            this.lblFeePerson.Name = "lblFeePerson";
+            this.lblFeePerson.Size = new System.Drawing.Size(84, 15);
+            this.lblFeePerson.TabIndex = 2;
+            this.lblFeePerson.Text = "Fee per person";
+            // 
+            // lblCostPerson
+            // 
+            this.lblCostPerson.AutoSize = true;
+            this.lblCostPerson.Location = new System.Drawing.Point(11, 76);
+            this.lblCostPerson.Name = "lblCostPerson";
+            this.lblCostPerson.Size = new System.Drawing.Size(90, 15);
+            this.lblCostPerson.TabIndex = 1;
+            this.lblCostPerson.Text = "Cost per person";
+            // 
+            // lblMaxNumberGuests
+            // 
+            this.lblMaxNumberGuests.AutoSize = true;
+            this.lblMaxNumberGuests.Location = new System.Drawing.Point(11, 40);
+            this.lblMaxNumberGuests.Name = "lblMaxNumberGuests";
+            this.lblMaxNumberGuests.Size = new System.Drawing.Size(126, 15);
+            this.lblMaxNumberGuests.TabIndex = 0;
+            this.lblMaxNumberGuests.Text = "Max number of guests";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnAdd);
@@ -89,71 +147,29 @@ namespace partyOrganizer
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Invite Guest";
             // 
-            // lblMaxNumberGuests
+            // btnAdd
             // 
-            this.lblMaxNumberGuests.AutoSize = true;
-            this.lblMaxNumberGuests.Location = new System.Drawing.Point(11, 40);
-            this.lblMaxNumberGuests.Name = "lblMaxNumberGuests";
-            this.lblMaxNumberGuests.Size = new System.Drawing.Size(126, 15);
-            this.lblMaxNumberGuests.TabIndex = 0;
-            this.lblMaxNumberGuests.Text = "Max number of guests";
+            this.btnAdd.Location = new System.Drawing.Point(105, 94);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // lblCostPerson
+            // txtbLastName
             // 
-            this.lblCostPerson.AutoSize = true;
-            this.lblCostPerson.Location = new System.Drawing.Point(11, 76);
-            this.lblCostPerson.Name = "lblCostPerson";
-            this.lblCostPerson.Size = new System.Drawing.Size(90, 15);
-            this.lblCostPerson.TabIndex = 1;
-            this.lblCostPerson.Text = "Cost per person";
+            this.txtbLastName.Location = new System.Drawing.Point(128, 54);
+            this.txtbLastName.Name = "txtbLastName";
+            this.txtbLastName.Size = new System.Drawing.Size(161, 23);
+            this.txtbLastName.TabIndex = 3;
             // 
-            // lblFeePerson
+            // txtbFirstName
             // 
-            this.lblFeePerson.AutoSize = true;
-            this.lblFeePerson.Location = new System.Drawing.Point(11, 105);
-            this.lblFeePerson.Name = "lblFeePerson";
-            this.lblFeePerson.Size = new System.Drawing.Size(84, 15);
-            this.lblFeePerson.TabIndex = 2;
-            this.lblFeePerson.Text = "Fee per person";
-            // 
-            // txtbMaxNumberGuests
-            // 
-            this.txtbMaxNumberGuests.Location = new System.Drawing.Point(172, 39);
-            this.txtbMaxNumberGuests.Name = "txtbMaxNumberGuests";
-            this.txtbMaxNumberGuests.Size = new System.Drawing.Size(100, 23);
-            this.txtbMaxNumberGuests.TabIndex = 3;
-            // 
-            // txtbCostPerson
-            // 
-            this.txtbCostPerson.Location = new System.Drawing.Point(172, 68);
-            this.txtbCostPerson.Name = "txtbCostPerson";
-            this.txtbCostPerson.Size = new System.Drawing.Size(100, 23);
-            this.txtbCostPerson.TabIndex = 4;
-            // 
-            // txtbFeePerson
-            // 
-            this.txtbFeePerson.Location = new System.Drawing.Point(172, 97);
-            this.txtbFeePerson.Name = "txtbFeePerson";
-            this.txtbFeePerson.Size = new System.Drawing.Size(100, 23);
-            this.txtbFeePerson.TabIndex = 5;
-            // 
-            // btnCreateList
-            // 
-            this.btnCreateList.Location = new System.Drawing.Point(121, 153);
-            this.btnCreateList.Name = "btnCreateList";
-            this.btnCreateList.Size = new System.Drawing.Size(75, 23);
-            this.btnCreateList.TabIndex = 6;
-            this.btnCreateList.Text = "Create List";
-            this.btnCreateList.UseVisualStyleBackColor = true;
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(12, 28);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(64, 15);
-            this.lblFirstName.TabIndex = 0;
-            this.lblFirstName.Text = "First Name";
+            this.txtbFirstName.Location = new System.Drawing.Point(128, 25);
+            this.txtbFirstName.Name = "txtbFirstName";
+            this.txtbFirstName.Size = new System.Drawing.Size(161, 23);
+            this.txtbFirstName.TabIndex = 2;
             // 
             // lblLastName
             // 
@@ -164,28 +180,14 @@ namespace partyOrganizer
             this.lblLastName.TabIndex = 1;
             this.lblLastName.Text = "Last Name";
             // 
-            // txtbFirstName
+            // lblFirstName
             // 
-            this.txtbFirstName.Location = new System.Drawing.Point(128, 25);
-            this.txtbFirstName.Name = "txtbFirstName";
-            this.txtbFirstName.Size = new System.Drawing.Size(161, 23);
-            this.txtbFirstName.TabIndex = 2;
-            // 
-            // txtbLastName
-            // 
-            this.txtbLastName.Location = new System.Drawing.Point(128, 54);
-            this.txtbLastName.Name = "txtbLastName";
-            this.txtbLastName.Size = new System.Drawing.Size(161, 23);
-            this.txtbLastName.TabIndex = 3;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(105, 94);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(12, 28);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(64, 15);
+            this.lblFirstName.TabIndex = 0;
+            this.lblFirstName.Text = "First Name";
             // 
             // label1
             // 
