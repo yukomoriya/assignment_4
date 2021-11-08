@@ -47,5 +47,16 @@ namespace partyOrganizer
 
             return numberOfGuests;
         }
+
+        public void DeleteGuest(int i)
+        {
+            Guests[i] = null;
+        }
+
+        public void ChangeGuest(string givenName, string familyName, int i)
+        {
+            Guest guest = new Guest(familyName, givenName);
+            Guests[i] = guest;
+        }
     }
 }
